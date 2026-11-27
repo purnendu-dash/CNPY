@@ -1,0 +1,14 @@
+{
+  "name": "islet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Dynamic Island for macOS: now playing, synced lyrics, and a file shelf in a notch-hugging pill.",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/electron/dist/Electron.app/Contents/MacOS/Electron ."
+  },
+  "devDependencies": {
+    "electron": "^45.5.0",
+    "geist": "^1.9.2"
+  }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src 'self' data: https:; font-src 'self'; style-src 'self'; script-src 'self'"
+    />
+    <title>Islet</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="stage">
+      <div id="island">
+        <div class="pill">
+          <div id="pillArt" class="art art-sm hidden"></div>
+          <div id="pillTitle" class="pill-title">Islet</div>
+          <div id="eq" class="eq">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="head">
+            <span id="date" class="date"></span>
+            <span class="head-right">
+              <span id="battery" class="battery"></span>
+              <span id="time" class="time"></span>
+            </span>
+          </div>
+
+          <div class="now">
+            <div id="panelArt" class="art art-lg"></div>
+            <div class="now-text">
+              <div id="title" class="title">Nothing playing</div>
+              <div id="sub" class="sub"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div id="bar" class="bar">
+              <div id="fill" class="fill"><span class="knob"></span></div>
+            </div>
+            <span class="times"><span id="elapsed">0:00</span><span>/</span><span id="total">0:00</span></span>
+          </div>
+
+          <div class="transport">
+            <button id="prev" class="ctl" aria-label="Previous">
+              <svg viewBox="0 0 16 16"><path d="M4 3.2h1.5v9.6H4zM13 3.5v9L6.2 8z" /></svg>
+            </button>
+            <button id="play" class="ctl main" aria-label="Play or pause">
+              <svg id="playIcon" viewBox="0 0 16 16"><path d="M4.2 2.7 13 8l-8.8 5.3z" /></svg>
+            </button>
+            <button id="next" class="ctl" aria-label="Next">
+              <svg viewBox="0 0 16 16"><path d="M10.5 3.2H12v9.6h-1.5zM3 3.5v9L9.8 8z" /></svg>
+            </button>
+          </div>
+
+          <div id="lyrics" class="lyrics"></div>
+
+          <div class="shelf">
+            <div id="chips" class="chips"></div>
+            <div class="shelf-hint">Drop files</div>
+            <button id="clearShelf" class="clear" hidden>Clear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
